@@ -13,3 +13,10 @@ public class Frog{
   }
   public void kill
 }
+
+  public Frog(Image i, DrawingCanvas c) {
+    frogImage = new VisibleImage(i, new Location(10, 10), c);
+  }
+  
+}
+
