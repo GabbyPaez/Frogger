@@ -4,7 +4,7 @@ import java.awt.*;
 public class Frog{
 
 
-  private VisibleImage fromImage;
+  private VisibleImage frogImage;
   private static final double FROG_HIEGHT = 48;
 
 
@@ -13,8 +13,8 @@ public class Frog{
     frogImage = new VisibleImage(i, new Location(10, 10), c);
   }
   
-    public boolean overlaps(VisibleImage vechicleImage){
-    return true;
+    public boolean overlaps(VisibleImage vehicleImage){
+    return frogImage.overlaps(vehicleImage);
   
   }
 }
