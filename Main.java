@@ -1,7 +1,9 @@
 import objectdraw.*;
-import java.awt.*;
-
-public class Main extends WindowController implements KeyListener{
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
+import java.awt.Color;
+public class Main extends WindowController implements KeyListener
+{
 
    // Constants defining the sizes of the background components.
    private static final double HIGHWAY_LENGTH = 700;
@@ -32,7 +34,7 @@ public class Main extends WindowController implements KeyListener{
    {
        
     
-       canvas.addKeyListener(this);
+      canvas.addKeyListener(this);
    	
       // Draw the background
       FilledRect highway = new FilledRect (HIGHWAY_LEFT, HIGHWAY_TOP, 
@@ -95,5 +97,16 @@ public class Main extends WindowController implements KeyListener{
    {
    
    }
-         
+
+
+public void	keyPressed(KeyEvent e)
+  {
+    
+  }
+public void	keyReleased(KeyEvent e){
+  
+}
+public void	keyTyped(KeyEvent e){
+  
+}   
 }
