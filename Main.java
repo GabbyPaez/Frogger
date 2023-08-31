@@ -2,6 +2,7 @@ import objectdraw.*;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import java.awt.Color;
+import java.awt.Image;
 
 public class Main extends WindowController implements KeyListener
 {
@@ -26,6 +27,7 @@ public class Main extends WindowController implements KeyListener
 
    // This method currently just draws the highway.  You will have to add
    // instructions to create the frog and the Lane ActiveObjects.
+  private Frog gerald;
    
    public static void main(String[] args) { 
    new Main().startController(800,700); 
@@ -56,7 +58,7 @@ public class Main extends WindowController implements KeyListener
       }
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
-           
+          gerald = new Frog(getImage("froggy.gif"), canvas);
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
