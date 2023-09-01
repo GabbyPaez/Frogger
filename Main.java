@@ -17,7 +17,7 @@ public class Main extends WindowController implements KeyListener
    // Constants defining the locations of the background components
    private static final double HIGHWAY_LEFT = 0;
    private static final double HIGHWAY_RIGHT = HIGHWAY_LEFT + HIGHWAY_LENGTH;
-   private static final double HIGHWAY_TOP = 0;
+   private static final double HIGHWAY_TOP = 50;
    private static final double HIGHWAY_BOTTOM = HIGHWAY_TOP + HIGHWAY_WIDTH;
    
    // Constants describing the lines on the highway
@@ -106,7 +106,19 @@ public class Main extends WindowController implements KeyListener
 
 public void	keyPressed(KeyEvent e)
   {
-    
+      char ch = e.getKeyChar();
+    if ( ch == 'w'){
+      gerald.hop('w');
+    }
+    if ( ch == 'a'){
+      gerald.hop('a');
+    }
+    if ( ch == 's'){
+      gerald.hop('s');
+    }
+    if ( ch == 'd'){
+      gerald.hop('d');
+    }
   }
 public void	keyReleased(KeyEvent e){
   
