@@ -60,7 +60,7 @@ public class Main extends WindowController implements KeyListener
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
           gerald = new Frog(getImage("froggy.gif"), canvas);
-     mcQueen = new Vehicle(getImage("van_right.gif"), canvas);
+     mcQueen = new Vehicle(getImage("van_right.gif"), canvas, 20,20, 10,10);
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
