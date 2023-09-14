@@ -1,15 +1,42 @@
 import objectdraw.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 
-public class Lane {
+public class Lane extends ActiveObject {
 
   private double speed;
   private DrawingCanvas can;
-  public Lane(Image i, DrawingCanvas c)
+  private Image im;
+  private ArrayList<Vehicle> theCarRow;
+  private boolean left;
+  private int x, y;
+  
+  
+  public Lane (Image i, DrawingCanvas c, Boolean incomingLeft, int y)
   {
-    speed = Math.random() +.333;
+if (!incomingLeft) {
+  speed = (Math.random() +.333) * -1;
+  x = 900;
+}
+else {
+  speed = Math.random() +.333;
+  x = -100;
+}
+    
+    im = i;
     can = c;
+    theCarRow = new ArrayList<Vehicle>();
+    left = incomingLeft;
+    this.y = y;
+    this.start();
+    
+   
+  }
+
+  public void run() {
+    Vehicle mcQueen = new Vehicle(im, can, x, y, speed, 800);
+    
     
   }
 
