@@ -11,19 +11,20 @@ public class Lane extends ActiveObject {
   private ArrayList<Vehicle> theCarRow;
   private boolean left;
   private int x, y;
+  private Frog geraldTwo;
   
   
-  public Lane (Image i, DrawingCanvas c, Boolean incomingLeft, int y)
+  public Lane (Image i, DrawingCanvas c, Boolean incomingLeft, int y, Frog g2)
   {
 if (!incomingLeft) {
-  speed = (Math.random() +.333) * -1;
+  speed = (Math.random() +.03) * - 1;
   x = 900;
 }
 else {
-  speed = Math.random() +.333;
+  speed = Math.random() +.03;
   x = -100;
 }
-    
+    geraldTwo = g2;
     im = i;
     can = c;
     theCarRow = new ArrayList<Vehicle>();
@@ -35,7 +36,7 @@ else {
   }
 
   public void run() {
-    Vehicle mcQueen = new Vehicle(im, can, x, y, speed, 800);
+    Vehicle mcQueen = new Vehicle(im, can, x, y, speed, 800, geraldTwo);
     
     
   }
