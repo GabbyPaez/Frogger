@@ -30,8 +30,8 @@ public class Main extends WindowController implements KeyListener
   private Frog gerald;
   private Vehicle mcQueen;
   private Vehicle tax;
-  //private Vehicle jee;
-  //private Vehicle old;
+  private Vehicle jee;
+  private Vehicle old;
 
   private Lily pad;
 
@@ -67,11 +67,11 @@ public class Main extends WindowController implements KeyListener
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
 
           gerald = new Frog(getImage("froggy.gif"),getImage("dead_Frog.gif"),getImage("3heart.png"),getImage("2heart.png"),getImage("1heart.png"),getImage("0heart.png"), canvas);
-     mcQueen = new Vehicle(getImage("van_right.gif"), canvas, 20,50, .0035,1000,gerald);
-     tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,1000,gerald);
-    // jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, .0035,1000,gerald);
-     //old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,350, .0035,1000,gerald);
-     pad = new Lily(0,10,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
+     mcQueen = new Vehicle(getImage("van_right.gif"), canvas, 20,50, .0035,0,gerald);
+     tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,0,gerald);
+     jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, -.0035,0,gerald);
+     old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,350, -.0035,0,gerald);
+     //pad = new Lily(0,10,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
 
 
    }
