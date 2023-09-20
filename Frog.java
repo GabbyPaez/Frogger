@@ -16,7 +16,7 @@ public class Frog {
   public Frog(Image i,Image de,Image h3,Image h2,Image h1,Image h0, DrawingCanvas c) {
     aliveFrog = i;
     deadFrog = de;
-    frogImage = new VisibleImage(i, new Location(250, 500), c);
+    frogImage = new VisibleImage(i, new Location(250, 400), c);
     death = false;
     lives = 3;
     this.h3 = h3;
