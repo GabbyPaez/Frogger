@@ -9,7 +9,7 @@ public class Lane extends ActiveObject {
   private DrawingCanvas can;
   private Image im;
   private ArrayList<Vehicle> theCarRow;
-  private boolean left;
+  private boolean incLeft;
   private int x, y;
   private Frog geraldTwo;
   
@@ -28,7 +28,7 @@ else {
     im = i;
     can = c;
     theCarRow = new ArrayList<Vehicle>();
-    left = incomingLeft;
+    incLeft = incomingLeft;
     this.y = y;
     this.start();
     
