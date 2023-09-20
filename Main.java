@@ -9,7 +9,7 @@ public class Main extends WindowController implements KeyListener
 
    // Constants defining the sizes of the background components.
    private static final double HIGHWAY_LENGTH = 700;
-   private static final double LANE_WIDTH = 100;
+   private static final double LANE_WIDTH = 70;
    private static final int NUM_LANES = 4;
    private static final double HIGHWAY_WIDTH = LANE_WIDTH * NUM_LANES;
    private static final double LINE_WIDTH = LANE_WIDTH / 10;
@@ -32,6 +32,9 @@ public class Main extends WindowController implements KeyListener
   private Vehicle tax;
   //private Vehicle jee;
   //private Vehicle old;
+
+  private Lily pad;
+
    
    public static void main(String[] args) { 
    new Main().startController(800,800); 
@@ -62,11 +65,14 @@ public class Main extends WindowController implements KeyListener
       }
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
+
           gerald = new Frog(getImage("froggy.gif"),getImage("dead_Frog.gif"), canvas);
      mcQueen = new Vehicle(getImage("van_right.gif"), canvas, 20,50, .0035,1000,gerald);
      tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,1000,gerald);
     // jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, .0035,1000,gerald);
      //old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,350, .0035,1000,gerald);
+     pad = new Lily(0,10,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
+
 
    }
    
