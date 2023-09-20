@@ -29,6 +29,7 @@ public class Main extends WindowController implements KeyListener
    // instructions to create the frog and the Lane ActiveObjects.
   private Frog gerald;
   private Vehicle mcQueen;
+  private Lily pad;
    
    public static void main(String[] args) { 
    new Main().startController(800,700); 
@@ -61,6 +62,7 @@ public class Main extends WindowController implements KeyListener
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
           gerald = new Frog(getImage("froggy.gif"),getImage("dead_Frog.gif"),getImage("3heart.png"),getImage("2heart.png"),getImage("1heart.png"),getImage("0heart.png"), canvas);
      mcQueen = new Vehicle(getImage("van_right.gif"), canvas, 20,20, .0035,1000,gerald);
+     pad = new Lily(0,10,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
 
    }
    
