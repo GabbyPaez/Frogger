@@ -25,10 +25,10 @@ public class Vehicle extends ActiveObject{
     //System.out.print("running");
   double timenow = System.currentTimeMillis();
     pause(30);
-    double actualPause = timenow - 30.0;
+    double actualPause = System.currentTimeMillis() - timenow;
     //speed times time for distance
     double distance = velocity * actualPause;
-    vehicleImage.move(0.5,0);
+    vehicleImage.move(distance,0);
     if(Gerald.overlaps(vehicleImage, true))
     {
       System.out.print("death");
