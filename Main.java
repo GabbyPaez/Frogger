@@ -17,7 +17,7 @@ public class Main extends WindowController implements KeyListener
    // Constants defining the locations of the background components
    private static final double HIGHWAY_LEFT = 0;
    private static final double HIGHWAY_RIGHT = HIGHWAY_LEFT + HIGHWAY_LENGTH;
-   private static final double HIGHWAY_TOP = 50;
+   private static final double HIGHWAY_TOP = 100;
    private static final double HIGHWAY_BOTTOM = HIGHWAY_TOP + HIGHWAY_WIDTH;
    
    // Constants describing the lines on the highway
@@ -67,10 +67,10 @@ public class Main extends WindowController implements KeyListener
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
 
           gerald = new Frog(getImage("froggy.gif"),getImage("dead_Frog.gif"),getImage("3heart.png"),getImage("2heart.png"),getImage("1heart.png"),getImage("0heart.png"), canvas);
-     mcQueen = new Vehicle(getImage("van_right.gif"), canvas, 20,50, .0035,0,gerald);
-     tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,0,gerald);
-     jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, -.0035,0,gerald);
-     old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,350, -.0035,0,gerald);
+     mcQueen = new Vehicle(getImage("van_right.gif"), canvas, 20,90, .0035,0,gerald);
+     tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,240, .0035,0,gerald);
+     jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550, 170, -.0035,0,gerald);
+     old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,320, -.0035,0,gerald);
      //pad = new Lily(0,10,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
 
 
