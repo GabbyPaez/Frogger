@@ -36,7 +36,12 @@ else {
   }
 
   public void run() {
-    Vehicle mcQueen = new Vehicle(im, can, x, y, speed, 800, geraldTwo);
+    while (true) {
+      theCarRow.add(new Vehicle(im, can, x, y, speed, 800, geraldTwo));
+      pause(speed * 10);
+      
+    }
+    
     
     
   }
