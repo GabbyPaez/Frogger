@@ -80,7 +80,7 @@ public void death(){
     else{
       heartImage.setImage(h0);
     }
-     //heartImage.set("3heart.png");
+  
   }
   
   
@@ -99,6 +99,8 @@ public void death(){
     if (ch == 'd'){
       frogImage.move(10,0);
     }
+  
+      
     }
    
   }
