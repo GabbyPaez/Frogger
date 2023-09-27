@@ -17,7 +17,7 @@ public class Main extends WindowController implements KeyListener
    // Constants defining the locations of the background components
    private static final double HIGHWAY_LEFT = 0;
    private static final double HIGHWAY_RIGHT = HIGHWAY_LEFT + HIGHWAY_LENGTH;
-   private static final double HIGHWAY_TOP = 50;
+   private static final double HIGHWAY_TOP = 100;
    private static final double HIGHWAY_BOTTOM = HIGHWAY_TOP + HIGHWAY_WIDTH;
    
    // Constants describing the lines on the highway
@@ -33,6 +33,8 @@ public class Main extends WindowController implements KeyListener
   private Lane superLane;
   //private Vehicle jee;
   //private Vehicle old;
+  private Vehicle jee;
+  private Vehicle old;
 
   private Lily pad;
 
@@ -65,16 +67,20 @@ public class Main extends WindowController implements KeyListener
         whichLine = whichLine + 1;
       }
       
-      // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
+      // ADD YOUR CODE TO CREATE THE FROG AND THE LANE
     
-    gerald = new Frog(getImage("froggy.gif"),getImage("dead_Frog.gif"), canvas);
+
      superLane = new Lane(getImage("van_right.gif"), canvas, true, 50, gerald);
    //  mcQueen = new Vehicle();
   //   tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,1000,gerald);
     // jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, .0035,1000,gerald);
      //old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,350, .0035,1000,gerald);
-     pad = new Lily(0,10,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
 
+
+pad = new Lily(15,30,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
+gerald = new rog(getImage("froggy.gif"),getImage("dead_Frog.gif"),getImage("3heart.png"),getImage("2heart.png"),getImage("1heart.png"),getImage("0heart.png"), canvas);
+ 
+  
 
    }
    
