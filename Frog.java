@@ -26,6 +26,9 @@ public class Frog {
     heartImage = new VisibleImage(h3, new Location(0, 0), c);
    lives();
   }
+  public VisibleImage getVi(){
+    return frogImage;
+  }
   
     public boolean overlaps(VisibleImage vehicleImage, boolean vehicle){
      // System.out.println("calls overlaps method");
@@ -99,6 +102,8 @@ public void death(){
     if (ch == 'd'){
       frogImage.move(10,0);
     }
+
+      
   
       
     }

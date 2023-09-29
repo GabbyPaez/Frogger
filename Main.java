@@ -72,16 +72,16 @@ public class Main extends WindowController implements KeyListener
 
    
    //  mcQueen = new Vehicle();
-  //   tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,1000,gerald);
-    // jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, .0035,1000,gerald);
-     //old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,350, .0035,1000,gerald);
+    
 
 
-pad = new Lily(15,30,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
+pad = new Lily(15,30,getImage("lily.jpg"),getImage("lilyFrog.jpg"),gerald, canvas);
 gerald = new Frog(getImage("froggy.gif"),getImage("dead_Frog.gif"),getImage("3heart.png"),getImage("2heart.png"),getImage("1heart.png"),getImage("0heart.png"), canvas);
  
     superLane = new Lane(getImage("van_right.gif"), canvas, true, 50, gerald);
-
+//tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,1000,gerald);
+    // jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, .0035,1000,gerald);
+    // old =  new Vehicle(getImage("oldcar_left.gif"), canvas, 550,350, .0035,1000,gerald);
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
@@ -140,6 +140,8 @@ public void	keyPressed(KeyEvent e)
     if ( ch == 'd'){
       gerald.hop('d');
     }
+
+    pad.overlaps(gerald.getVi());
   }
 public void	keyReleased(KeyEvent e){
   
