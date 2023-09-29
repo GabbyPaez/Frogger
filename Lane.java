@@ -17,12 +17,12 @@ public class Lane extends ActiveObject {
   public Lane (Image i, DrawingCanvas c, Boolean incomingLeft, int y, Frog g2)
   {
 if (!incomingLeft) {
-  speed = (Math.random() +.03) * - 1;
-  x = 900;
+  speed = (Math.random() ) ;
+  x = -50;
 }
 else {
-  speed = Math.random() +.03;
-  x = -100;
+  speed = Math.random() * -1;
+  x =500;
 }
     geraldTwo = g2;
     im = i;
@@ -37,6 +37,8 @@ else {
 
   public void run() {
     while (true) {
+
+     //System.out.print(x+" "+y+" "+ speed);
       theCarRow.add(new Vehicle(im, can, x, y, speed, 800, geraldTwo));
       pause(speed * 10);
       

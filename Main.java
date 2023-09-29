@@ -70,7 +70,7 @@ public class Main extends WindowController implements KeyListener
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANE
     
 
-     superLane = new Lane(getImage("van_right.gif"), canvas, true, 50, gerald);
+   
    //  mcQueen = new Vehicle();
   //   tax =  new Vehicle(getImage("taxi_right.gif"), canvas, 20,260, .0035,1000,gerald);
     // jee = new Vehicle(getImage("jeep_left.gif"), canvas, 550,100, .0035,1000,gerald);
@@ -78,9 +78,9 @@ public class Main extends WindowController implements KeyListener
 
 
 pad = new Lily(15,30,getImage("lily.jpg"),getImage("lilyFrog.jpg"), canvas);
-gerald = new rog(getImage("froggy.gif"),getImage("dead_Frog.gif"),getImage("3heart.png"),getImage("2heart.png"),getImage("1heart.png"),getImage("0heart.png"), canvas);
+gerald = new Frog(getImage("froggy.gif"),getImage("dead_Frog.gif"),getImage("3heart.png"),getImage("2heart.png"),getImage("1heart.png"),getImage("0heart.png"), canvas);
  
-  
+    superLane = new Lane(getImage("van_right.gif"), canvas, true, 50, gerald);
 
    }
    
